@@ -8,7 +8,7 @@ class BooksApp extends Component {
 
     showSearchPage: true
   }
-{*// Test}
+
   render() {
     return (
       <div className="app">
