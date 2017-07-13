@@ -7,7 +7,6 @@ import './SearchBar.js'
 class BooksApp extends Component {
   state = { //use URL in browser's address bar
 
-
     showSearchPage: true
   }
 
@@ -29,7 +28,7 @@ class BooksApp extends Component {
         ) : (
           <div className="list-books">
             <div className="list-books-title">
-              <h1>MyReads</h1>
+              <h1>Madison's Bookshelf</h1>
             </div>
             <div className="list-books-content">
               <div>
