@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import * as BooksAPI from './BooksAPI'
 import './App.css'
-import './'
+import './BooksList.js'
+import './SearchBar.js'
 
 class BooksApp extends Component {
   state = { //use URL in browser's address bar
