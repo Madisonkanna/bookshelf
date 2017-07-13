@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 //Create a searchbar component
 
 class SearchBar extends Component {
+	//Initialize state
 	constructor(props) {
 		super(props);
 		//Current state of search term is an empty string. 
