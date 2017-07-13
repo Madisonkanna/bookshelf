@@ -3,22 +3,14 @@ import React, { Component } from 'react'
 //Create a searchbar
 
 class SearchBar extends Component {
+
+
+
 	render() {
-		return <input onChange={this.onInputChange} />;
+		return <input type="text" placeholder="Search by title or author"/>
 	}
-
-	onInputChange() {
-		console.log('Change');
-	}
-
 
 }
-
-
-
-
-
-
 
 export default SearchBar;
 

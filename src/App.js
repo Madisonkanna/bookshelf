@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import * as BooksAPI from './BooksAPI'
 import './App.css'
-import './BooksList.js'
-import './SearchBar.js'
+import SearchBar from './SearchBar.js'
 
 class BooksApp extends Component {
   state = { //use URL in browser's address bar
@@ -18,7 +17,7 @@ class BooksApp extends Component {
             <div className="search-books-bar">
               <a className="close-search" onClick={() => this.setState({ showSearchPage: false })}>Close</a>
               <div className="search-books-input-wrapper">
-                <input type="text" placeholder="Search by title or author"/>
+                <SearchBar />
               </div>
             </div>
             <div className="search-books-results">
