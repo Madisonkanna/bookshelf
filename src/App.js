@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import * as BooksAPI from './BooksAPI'
 import './App.css'
-import ListBooks from './ListBooks.js'
+import AddBooks from './AddBooks.js'
 import BookList from './BookList.js'
-//import BookshelfChanger from './BookshelfChanger.js'
+import Book from './Book.js'
+//import Book from './Book.js'
+
  
 
 class BooksApp extends Component {
@@ -20,11 +22,18 @@ class BooksApp extends Component {
       })
     }
     
+    removeBook = (book) => {
+      this.setState((state) => ({
+        books: book.books.filter((b) => b.id !== book.id)
+      }))
+    }
+
 
   render() {
     //Create a var that easily replicates this.state.books
   const books = this.state.books
  console.log(books);
+
 
     return (
       <div className="app">
@@ -33,7 +42,7 @@ class BooksApp extends Component {
             <div className="search-books-bar">
               <a className="close-search" onClick={() => this.setState({ showSearchPage: false })}>Close</a>
               <div className="search-books-input-wrapper">
-              <ListBooks />
+              <AddBooks />
               </div>
             </div>
             <div className="search-books-results">
@@ -49,6 +58,7 @@ class BooksApp extends Component {
               <div>
                 <div className="bookshelf">
                   <BookList books={this.state.books} />
+
                   <h2 className="bookshelf-title">Currently Reading</h2>
                   <div className="bookshelf-books">
                     <ol className="books-grid">
