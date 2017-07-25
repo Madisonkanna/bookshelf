@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import * as BooksAPI from './BooksAPI'
 import './App.css'
+import { Route } from 'react-router-dom'
 import AddBooks from './AddBooks.js'
 import BookList from './BookList.js'
 import Book from './Book.js'
-//import Book from './Book.js'
+
 
  
 
@@ -12,7 +13,7 @@ class BooksApp extends Component {
   state = { //use URL in browser's address bar
   //Array of my books to display
    books: [],
-    showSearchPage: true
+
 
  }
     componentDidMount() {
@@ -26,7 +27,12 @@ class BooksApp extends Component {
       this.setState((state) => ({
         books: book.books.filter((b) => b.id !== book.id)
       }))
+
+
+      BooksAPI.remove(book);
     }
+
+
 
 
   render() {
@@ -37,10 +43,19 @@ class BooksApp extends Component {
 
     return (
       <div className="app">
-        {this.state.showSearchPage ? (
+        <Route path="/" render={() => (
+          <h1>Madison's Bookshelf</h1>
+
+
+          )}/>
+
+
           <div className="search-books">
             <div className="search-books-bar">
+              {/*}
               <a className="close-search" onClick={() => this.setState({ showSearchPage: false })}>Close</a>
+              */}
+
               <div className="search-books-input-wrapper">
               <AddBooks />
               </div>
@@ -49,7 +64,7 @@ class BooksApp extends Component {
               <ol className="books-grid"></ol>
             </div>
           </div>
-        ) : (
+
           <div className="list-books">
             <div className="list-books-title">
               <h1>Madison's Bookshelf</h1>
@@ -117,7 +132,12 @@ class BooksApp extends Component {
 
 
             <div className="open-search">
+              {/*
               <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
+              }
+              */}
+
+
             </div>
           </div>
         )}
