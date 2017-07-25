@@ -11,7 +11,7 @@ import * as BooksAPI from './BooksAPI'
 //  console.log(BooksAPI.search('Make'));
 // Above, this is how you search and return your array of objects with 'make' in the subject line :)
 
-class ListBooks extends Component {
+class AddBooks extends Component {
 
 	//static propTypes = {
 	//	books: PropTypes.array.isRequired
@@ -51,5 +51,5 @@ class ListBooks extends Component {
 
 }
 
-export default ListBooks
+export default AddBooks
 
