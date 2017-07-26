@@ -72,9 +72,9 @@ class BooksApp extends Component {
             <div className="list-books-content">
               <div>
                 <div className="bookshelf">
-                  <BookList books={this.state.books} />
 
-                  <h2 className="bookshelf-title">Currently Reading</h2>
+                  <h2>Currrently Reading</h2>
+                  <BookList books={this.state.books} className="bookshelf-title"/>
                   <div className="bookshelf-books">
                     <ol className="books-grid">
                       <li>
