@@ -5,6 +5,7 @@ const Book = ({book}) => {
 	const bookTitle = book.title;
 	const bookAuthor = book.authors;
 
+
 	return (
 			<div className="bookshelf-books">
 				<div className="books-grid">
@@ -12,7 +13,7 @@ const Book = ({book}) => {
 						<div className="book-top">
 
 							<div className="book-shelf-changer">
-				                <select>
+				                <select onChange>
 				                	<option value="none" disabled>Move to...</option>
 				                    <option value="currentlyReading">Currently Reading</option>
 				                        <option value="wantToRead">Want to Read</option>

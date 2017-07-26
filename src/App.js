@@ -6,7 +6,7 @@ import AddBooks from './AddBooks.js'
 import BookList from './BookList.js'
 import Book from './Book.js'
 
-
+import { Link } from 'react-router-dom'
  
 
 class BooksApp extends Component {
@@ -131,14 +131,11 @@ class BooksApp extends Component {
             </div>
 
 
-            <div className="open-search">
-              {/*
-              <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
-              }
-              */}
-
-
+            <div>
+              <Link to="/search" className="open-search">Add book </Link>
             </div>
+
+
           </div>
         )}
       </div>

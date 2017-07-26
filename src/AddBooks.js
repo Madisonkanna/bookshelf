@@ -37,7 +37,7 @@ class AddBooks extends Component {
 			//(BooksAPI.search('Make'));
 			<div>
 					<input 
-						value={this.state.term}
+						//value={this.state.term}
 						onChange={this.handleChange} />
 						Value of input: {this.state.term}
 
