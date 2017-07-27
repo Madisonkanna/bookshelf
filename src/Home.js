@@ -9,7 +9,7 @@ import Book from './Book.js'
 import { Link } from 'react-router-dom'
  
 
-class BooksApp extends Component {
+class Home extends Component {
   state = { //use URL in browser's address bar
   //Array of my books to display
    books: [],
@@ -66,4 +66,4 @@ class BooksApp extends Component {
   }
 }
 
-export default BooksApp
+export default Home

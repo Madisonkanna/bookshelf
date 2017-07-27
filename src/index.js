@@ -1,25 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
+import Home from './Home'
 import './index.css'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 
-const App () => {
+const BookApp = () => {
 	return (
 		<BrowserRouter>
-			<div className="app">
+			<div className="book-app">
 				<Route exact path="/" component={Home} />
-				
 			</div>
 		</BrowserRouter>
-				);
+		)
 }
 
-
-
 ReactDOM.render(
-	<BrowserRouter><App /></BrowserRouter>,
-	document.getElementById('root')
+	<BookApp />,
+	document.getElementById("root")
 
-	);
+)
