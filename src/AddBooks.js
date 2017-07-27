@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 //import escapeRegExp from 'escape-string-regexp'
 //import sortBy from 'sort-by'
 import * as BooksAPI from './BooksAPI'
+import { Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 //Create a searchbar component
 
@@ -33,18 +35,28 @@ class AddBooks extends Component {
 	render() {
 
 		return (
-			
+
+
+
 			//(BooksAPI.search('Make'));
-			<div>
-					<input 
+
+
+
+				<div>
+					<Link to="/" className="close-create">Back
+					</Link>
+
+
+						<input 
 						//value={this.state.term}
-						onChange={this.handleChange} />
-						Value of input: {this.state.term}
+							onChange={this.handleChange} />
+							Value of input: {this.state.term}
 
 
 
 
-			</div>
+				</div>
+
 
 			);
 	}

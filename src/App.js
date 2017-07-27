@@ -42,103 +42,11 @@ class BooksApp extends Component {
 
 
     return (
-      <div className="app">
-        <Route path="/" render={() => (
-          <h1>Madison's Bookshelf</h1>
+      <div className="app">Hi
 
 
-          )}/>
-
-
-          <div className="search-books">
-            <div className="search-books-bar">
-              {/*}
-              <a className="close-search" onClick={() => this.setState({ showSearchPage: false })}>Close</a>
-              */}
-
-              <div className="search-books-input-wrapper">
-              <AddBooks />
-              </div>
-            </div>
-            <div className="search-books-results">
-              <ol className="books-grid"></ol>
-            </div>
-          </div>
-
-          <div className="list-books">
-            <div className="list-books-title">
-              <h1>Madison's Bookshelf</h1>
-            </div>
-            <div className="list-books-content">
-              <div>
-                <div className="bookshelf">
-
-                  <h2>Currrently Reading</h2>
-                  <BookList books={this.state.books} className="bookshelf-title"/>
-                  <div className="bookshelf-books">
-                    <ol className="books-grid">
-                      <li>
-                        <div className="book">
-
-                        </div>
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-
-                <div className="bookshelf">
-                  <h2 className="bookshelf-title">Want to Read</h2>
-                  <div className="bookshelf-books">
-                    <ol className="books-grid">
-                      <li>
-                        <div className="book">
-                     
-                        </div>
-                      </li>
-                      <li>
-                        <div className="book">
-
-                        </div>
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-
-                <div className="bookshelf">
-                  <h2 className="bookshelf-title">Read</h2>
-                  <div className="bookshelf-books">
-                    <ol className="books-grid">
-                      <li>
-                        <div className="book">
-                          
-
-                        </div>
-                      </li>
-                      <li>
-                        <div className="book">
-                          
-                        </div>
-                      </li>
-                      <li>
-                        <div className="book">
-                        </div>
-
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <div>
-              <Link to="/search" className="open-search">Add book </Link>
-            </div>
-
-
-          </div>
-        )}
       </div>
+
     )
   }
 }
