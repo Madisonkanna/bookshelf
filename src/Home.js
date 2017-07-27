@@ -16,6 +16,13 @@ class Home extends Component {
 
 
  }
+
+//WRite a function that switches my shelf from currently reading to something else--hooks up to my onChange!
+ switchShelf = ()
+
+
+
+
     componentDidMount() {
       BooksAPI.getAll().then((books) => {
         //Set the BooksApp state to the array of books
@@ -47,7 +54,7 @@ class Home extends Component {
         <Route exact path="/" render={() => (
           <div>
             <h1>Madison's bookshelf</h1>
-            <div value={this.state.books} className="currentlyReading"> 
+            <div className="currentlyReading"> 
               <h2>Currently reading</h2>
 
             </div>
@@ -55,8 +62,6 @@ class Home extends Component {
 
 
  
-
-
 
           )}/>
 
