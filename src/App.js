@@ -42,10 +42,25 @@ class BooksApp extends Component {
 
 
     return (
-      <div className="app">Hi
 
 
-      </div>
+        <Route exact path="/" render={() => (
+          <div>
+            <h1>Madison's bookshelf</h1>
+            <div value={this.state.books} className="currentlyReading"> 
+              <h2>Currently reading</h2>
+
+            </div>
+          </div>
+
+
+ 
+
+
+
+          )}/>
+
+
 
     )
   }
