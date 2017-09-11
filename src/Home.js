@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import * as BooksAPI from "./BooksAPI";
 import "./App.css";
 import { Route } from "react-router-dom";
-import AddBooks from "./AddBooks.js";
 import BookList from "./BookList.js";
 import sortBy from "sort-by";
 import Book from "./Book.js";
@@ -13,23 +12,23 @@ import { Link } from "react-router-dom";
 class Home extends Component {
   state = {
     books: []
-  };
+  }
 
-  switchShelf = (book, updateShelf) => {
-    const bookID = book.id;
-    BooksAPI.update(book, updateShelf).then(() => {
-      this.setState(oldState => {
-        return {
-          books: oldState.books.map(book => {
-            if (book.id === bookID) {
-              book.shelf = updateShelf;
-            }
-            return book;
-          })
-        };
-      });
-    });
-  };
+    switchShelf = (book, updateShelf) => {
+        const bookId = book.id;
+        BooksAPI.update(book, updateShelf).then(() => {
+            this.setState(oldState => {
+                return {
+                    books: oldState.books.map(book => {
+                        if (book.id === bookId) {
+                            book.shelf = updateShelf;
+                        }
+                        return book;
+                    })
+                };
+            });
+        });
+    };
 
   componentDidMount() {
     BooksAPI.getAll().then(books => {
@@ -90,7 +89,7 @@ class Home extends Component {
               />
             </div>
 
-            <Link to="/add" className="open-search">
+            <Link to="/search" className="open-search">
               Add a book
             </Link>
           </div>}

@@ -1,7 +1,8 @@
 import React from "react";
-import Book from "./Book.js";
+import Book from "./Book.js"; 
+import Search from "./Search.js";
 
-const BookList = props => {
+const BookList = (props) => {
     //Use map iterator
     //const bookItems = props.books.map((book) => {
     //  return <Book key={book.id} book={book} />

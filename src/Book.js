@@ -1,11 +1,11 @@
 import React from "react";
 
-const Book = props => {
+const Book = (props) => {
 	const book = props.book,
 		//this is a function switchShelf that
-		switchShelf = event => {
+		switchShelf = (event) => {
 			const updateShelf = event.target.value;
-			if (updateShelf !== book.shelf) {
+			if (updateShelf !==book.shelf) {
 				props.switchShelf(book, updateShelf);
 			}
 		},
